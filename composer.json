@@ -1,0 +1,22 @@
+{
+    "name": "roxway/errornotifybundle",
+    "type": "symfony-bundle",
+    "description": "Symfony2 Bundle to email exeptions",
+    "keywords": ["symfony2", "exception", "logging"],
+    "homepage": "https://github.com/szymek/RoxWayErrorNotifyBundle",
+    "authors": [
+        {
+            "name": "Szymon Szewczyk"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "symfony/symfony": "2.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "RoxWay\\Bundle\\ErrorNotifyBundle": ""
+        }
+    },
+    "target-dir": "RoxWay/Bundle/ErrorNotifyBundle"
+}
