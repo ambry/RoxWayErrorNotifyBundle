@@ -9,7 +9,16 @@
 {% if request_attributes %}
 <h3>Request Attributes:</h3>
 {% for key, header in request_attributes %}
-    <strong>{{ key }}</strong>: {{ header }}<br />
+    <strong>{{ key }}</strong>: 
+    {% if header is iterable %}
+        {% for item in header %}
+            {{ item }}
+            {% if loop.last == false %},{% endif %}
+        {% endfor %}
+    {% else %}
+        {{ header }}
+    {% endif %}
+    <br />
 {% endfor %}
 {% endif %}
 
