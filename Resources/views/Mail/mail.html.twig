@@ -12,11 +12,13 @@
     <strong>{{ key }}</strong>: 
     {% if header is iterable %}
         {% for item in header %}
-            {{ item }}
+            {{ item|display }}
             {% if loop.last == false %},{% endif %}
+        {% else %}
+            [&nbsp;]
         {% endfor %}
     {% else %}
-        {{ header }}
+        {{ header|display }}
     {% endif %}
     <br />
 {% endfor %}
