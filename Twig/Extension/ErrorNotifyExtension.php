@@ -2,6 +2,8 @@
 
 namespace RoxWay\Bundle\ErrorNotifyBundle\Twig\Extension;
 
+use Doctrine\Common\Util\Debug;
+
 class ErrorNotifyExtension extends \Twig_Extension
 {
     /**
@@ -33,7 +35,7 @@ class ErrorNotifyExtension extends \Twig_Extension
         }
 
         ob_start();
-        var_dump($item);
+        Debug::dump($item, 2, false);
         $str = ob_get_clean();
 
         return $str;
